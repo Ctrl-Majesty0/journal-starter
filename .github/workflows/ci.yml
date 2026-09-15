@@ -108,11 +108,11 @@ jobs:
         with:
           username: ${{ secrets.REGISTRY_USERNAME }}
           password: ${{ secrets.REGISTRY_PASSWORD }}
-          registry: ${{ secrets.REGISTRY_NAME }}.azurecr.io
+          registry: newregistryapl0-bucpa2c5cdfmfvad.azurecr.io
   
       - name: Build Docker image
-        run: docker build -t ${{ secrets.REGISTRY_NAME }}.azurecr.io/my-app:${{ github.sha }} .
+        run: docker build -t newregistryapl0-bucpa2c5cdfmfvad.azurecr.io/my-app:${{ github.sha }} .
   
       - name: Push Docker image
-        run: docker push ${{ secrets.REGISTRY_NAME }}.azurecr.io/my-app:${{ github.sha }}
+        run: docker push newregistryapl0-bucpa2c5cdfmfvad.azurecr.io/my-app:${{ github.sha }}
 
